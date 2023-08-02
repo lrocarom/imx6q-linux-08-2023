@@ -2,3 +2,9 @@ SELECT THE COMPILER AND THE ARCHITECTURE
 	export CROSS_COMPILE=arm-linux-gnueabihf-
 	export ARCH=arm
 TRY TO EXEC MAKEFILE
+
+ONCE THE dts IS DONE TO COMPILE
+
+	make clean
+	make imx_v7_defconfig
+	make -j4 zImage imx6q-lrocarom.dtb
